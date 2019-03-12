@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,14 +10,16 @@
 
 
     <LinearLayout
-        android:layout_marginLeft="20sp"
-        android:layout_marginRight="20sp"
-        android:layout_marginBottom="20sp"
-       android:layout_marginTop="100sp"
-
-
+        android:id="@+id/ll1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20sp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <TextView
@@ -31,71 +33,93 @@
             />
 
         <EditText
-            android:layout_weight="2"
-                android:layout_width="0dp"
             android:id="@+id/et_player_oen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
 
-            android:layout_height="wrap_content" />
+            android:layout_weight="2" />
 
     </LinearLayout>
+
     <LinearLayout
-        android:layout_margin="20dp"
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:layout_marginTop="44sp"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll1">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fares Two:"
-            android:textSize="30dp"
             android:layout_weight="1"
-            />
+            android:text="Fares Two:"
+            android:textSize="30dp" />
 
         <EditText
             android:id="@+id/et_player_two"
-            android:layout_width="1dp"
-            android:layout_weight="2"
+            android:layout_width="1sp"
+            android:layout_height="wrap_content"
 
 
-            android:layout_height="wrap_content" />
+            android:layout_weight="2" />
 
     </LinearLayout>
+
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginRight="16sp"
+        android:layout_marginBottom="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_chainStyle="spread_inside">
+
         <TextView
-            android:layout_margin="20sp"
-            android:textSize="30sp"
-            android:textColor="@color/black"
+            android:id="@+id/tv_start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Fares to Start:"
-            android:id="@+id/tv_start"
+            android:textColor="@color/black"
+            android:textSize="30sp"
 
             />
+
         <RadioGroup
-            android:layout_toEndOf="@id/tv_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_below="@id/tv_start"
             android:layout_margin="20sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">\
+            android:layout_toEndOf="@id/tv_start"
+            android:layout_toRightOf="@id/tv_start">
 
             <RadioButton
-                android:checked="true"
                 android:id="@+id/rb_player_one"
-                android:textSize="20sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:checked="true"
                 android:text="Fares One"
+                android:textSize="20sp"
 
 
                 />
+
             <RadioButton
                 android:id="@+id/rb_player_two"
-                android:textSize="20sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Fares Two"
+                android:textSize="20sp"
 
 
                 />
@@ -109,12 +133,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="20sp"
+        android:layout_margin="0sp"
+
+
         android:background="@color/yellow_green"
-        android:text="Start" />
+        android:text="Start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
 
 
 
 
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
