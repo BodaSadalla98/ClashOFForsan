@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Restart Game"
+            android:layout_marginTop="10sp"
+            android:id="@+id/button_restart_game"
+
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Game"
+            android:layout_margin="10sp"
+            android:id="@+id/button_new_game"
+
+            />
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+            android:id="@+id/rl_player_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+
+            android:id="@+id/tv_player_one_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:text="PlayerOne"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/tv_player_one_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_player_one_name"
+            android:text="ScoreOne"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/button_add_player_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_toEndOf="@id/tv_player_one_name"
+            android:text="+"
+            android:textSize="30sp" />
+
+        <Button
+
+            android:id="@+id/button_subtract_player_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_add_player_one"
+            android:layout_marginLeft="20sp"
+            android:layout_toRightOf="@id/tv_player_one_name"
+
+            android:text="-"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <Button
+            android:id="@+id/button_add_player_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+
+            android:text="+"
+            android:textSize="30sp" />
+
+        <Button
+
+            android:id="@+id/button_subtract_player_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_add_player_two"
+            android:layout_marginLeft="20sp"
+
+            android:text="-"
+            android:textSize="30sp" />
+
+        <TextView
+
+            android:id="@+id/tv_player_two_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PlayerTwo"
+            android:layout_marginLeft="20sp"
+            android:textSize="40sp"
+            android:layout_toRightOf="@id/button_add_player_two"
+            />
+
+        <TextView
+            android:layout_marginLeft="20sp"
+            android:id="@+id/tv_player_two_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_player_two_name"
+            android:layout_toRightOf="@id/button_add_player_two"
+            android:text="ScoreTwo"
+            android:textSize="40sp" />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rl_player_one">
+
+        <TextView
+            android:id="@+id/tv_serve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentStart="true"
+
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+
+            android:layout_marginLeft="100sp"
+
+
+            android:text="Serve:"
+            android:textColor="@color/black"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/tv_player_with_serve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+
+            android:layout_marginLeft="20sp"
+
+            android:layout_toEndOf="@id/tv_serve"
+            android:text="Player1"
+            android:textColor="@color/black"
+            android:textSize="40sp" />
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

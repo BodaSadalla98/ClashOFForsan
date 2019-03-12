@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ClashOfForsan</string>
+
+    <string name="player_one_key">p1</string>
+    <string name="player_two_key">p2</string>
+    <string name="player_to_start_key">playerstarting</string>
+    <string name="appname">Clash Of Forsan</string>
+    <string name="winner_key">wiiner</string>
+</resources>
